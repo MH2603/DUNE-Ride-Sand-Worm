@@ -3,9 +3,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MH.EnitySystem
+namespace MH.EntitySystem
 {
-    public abstract class BaseEnitity : MonoBehaviour
+    public abstract class BaseEntity : MonoBehaviour
     {
         [SerializeField] protected EntityComponent[] _components;
 
@@ -15,8 +15,7 @@ namespace MH.EnitySystem
         {
             foreach (var component in _components) 
             {
-                    component.Initialized(this);
-
+                component.Initialized(this);
                 _componentMap[component.GetType()] = component;
             }
         }

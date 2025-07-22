@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace MH.EnitySystem
+namespace MH.EntitySystem
 {
     public abstract class EntityComponent : MonoBehaviour
     {
-        protected BaseEnitity _entity;
+        protected BaseEntity _entity;
 
-        public virtual void Initialized(BaseEnitity baseEnitity)
+        public virtual void Initialized(BaseEntity baseEntity)
         {
-            _entity = baseEnitity;
+            _entity = baseEntity;
         }
 
         public virtual void ManualUpdate() { }
